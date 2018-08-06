@@ -20,7 +20,7 @@ public class CustomUserService implements UserDetailsService {
         User user = repository.findByUsername(username);
 
         if (user == null) {
-            throw new UsernameNotFoundException(String.format("User %s does not exist!", username));
+            throw new UsernameNotFoundException(String.format("UserDTO %s does not exist!", username));
         }
 
 

@@ -44,6 +44,10 @@ public class UserService {
         return repository.save(user);
     }
 
+    public List<User> fetchUsers() {
+        return (List<User>) repository.findAll();
+    }
+
     public User getCurrentUser() {
         User user = repository.findByUsername(getUsername());
 
