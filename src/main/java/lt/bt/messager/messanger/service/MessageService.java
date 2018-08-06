@@ -16,10 +16,15 @@ public class MessageService {
     @Autowired
     private MessageRepository messageRepository;
 
+    @Autowired
+    private UserService userService;
+
     public void createMessage(Message message) {
         MessageEntity entity = new MessageEntity();
 
         entity.setMessage(message.getMessage());
+        entity.setReceiverId(message.getReceiverId());
+        entity.setAuthorId(userService.getCurrentUser().getUserId());
 
         messageRepository.save(entity);
     }

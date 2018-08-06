@@ -14,6 +14,10 @@ public class MessageEntity {
 
     private String message;
 
+    private Long receiverId;
+
+    private Long authorId;
+
     public Long getId() {
         return id;
     }
@@ -28,5 +32,21 @@ public class MessageEntity {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public Long getReceiverId() {
+        return receiverId;
+    }
+
+    public void setReceiverId(Long receiverId) {
+        this.receiverId = receiverId;
+    }
+
+    public Long getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(Long authorId) {
+        this.authorId = authorId;
     }
 }

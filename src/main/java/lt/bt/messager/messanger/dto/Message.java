@@ -5,6 +5,16 @@ import lt.bt.messager.messanger.entity.MessageEntity;
 public class Message {
     private String message;
 
+    private Long receiverId;
+
+    public Message() {
+    }
+
+    public Message(MessageEntity entity) {
+        setMessage(entity.getMessage());
+        setReceiverId(entity.getReceiverId());
+    }
+
     public String getMessage() {
         return message;
     }
@@ -13,11 +23,11 @@ public class Message {
         this.message = message;
     }
 
-    public Message() {
-    }
-    public Message(MessageEntity entity) {
-        setMessage(entity.getMessage());
+    public Long getReceiverId() {
+        return receiverId;
     }
 
-
+    public void setReceiverId(Long receiverId) {
+        this.receiverId = receiverId;
+    }
 }
